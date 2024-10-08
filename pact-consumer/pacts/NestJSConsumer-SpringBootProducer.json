@@ -1,0 +1,40 @@
+{
+  "consumer": {
+    "name": "NestJSConsumer"
+  },
+  "interactions": [
+    {
+      "description": "a request for data",
+      "providerState": "the producer has data",
+      "request": {
+        "method": "GET",
+        "path": "/api/data"
+      },
+      "response": {
+        "body": {
+          "id": 1,
+          "name": "Sample Data"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "13.1.4"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "SpringBootProducer"
+  }
+}
