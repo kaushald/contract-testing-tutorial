@@ -35,4 +35,12 @@ public class ProducerPactVerificationTest {
         System.out.println("Setting up producer state for 'the producer has data'");
         // Add any setup needed here, like initializing data for the test
     }
+
+    @State("user with ID 1 exists")
+    public void userExistsState() {
+        System.out.println("Setting up state for 'user with ID 1 exists'");
+        // Setup any necessary data or conditions (e.g., add user data if necessary)
+    }
 }
+
+//
