@@ -36,7 +36,8 @@ This sets up a Pact Broker at `http://localhost:9292`.
 
 3.  Run the consumer test to generate the Pact contract:
 
-        npm run test
+        npm test test/pact/consumer.data.pact.spec.ts
+        npm test test/pact/consumer.user.pact.spec.ts
 
 4.  Publish the Pact to the broker:
 
