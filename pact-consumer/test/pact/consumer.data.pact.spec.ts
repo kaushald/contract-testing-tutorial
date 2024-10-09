@@ -6,7 +6,7 @@ describe('Pact with Producer', () => {
   const provider = new Pact({
     consumer: 'NestJSConsumer',
     provider: 'SpringBootProducer',
-    port: 1234,
+    port: 12345,
     log: path.resolve(process.cwd(), 'logs', 'pact.log'),
     dir: path.resolve(process.cwd(), 'pacts'),
     logLevel: 'info',
@@ -32,7 +32,7 @@ describe('Pact with Producer', () => {
       },
     });
 
-    const response = await axios.get('http://localhost:1234/api/data');
+    const response = await axios.get('http://localhost:12345/api/data');
     expect(response.status).toBe(200);
     expect(response.data).toEqual({ id: 1, name: 'Sample Data' });
 
