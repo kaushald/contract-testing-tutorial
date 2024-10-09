@@ -1,15 +1,15 @@
-// pact/consumer.pact.spec.ts
+// pact/user.pact.spec.ts
 
 import { Pact } from '@pact-foundation/pact';
 import * as path from 'path';
 import axios from 'axios';
 
-describe('Pact with Producer for User Details', () => {
+describe('Pact with Producer - User Details', () => {
   const provider = new Pact({
     consumer: 'NestJSConsumer',
     provider: 'SpringBootProducer',
     port: 1234,
-    log: path.resolve(process.cwd(), 'logs', 'pact.log'),
+    log: path.resolve(process.cwd(), 'logs', 'pact-user.log'),
     dir: path.resolve(process.cwd(), 'pacts'),
     logLevel: 'info',
   });
