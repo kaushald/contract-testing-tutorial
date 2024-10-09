@@ -13,8 +13,8 @@ This project demonstrates contract testing between a NestJS consumer and a Sprin
 
 ### 1. Clone the Repository
 
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone git@github.com:kaushald/contract-testing-tutorial.git
+    cd contract-testing-tutorial
 
 ### 2. Start the Pact Broker
 
@@ -40,7 +40,7 @@ This sets up a Pact Broker at `http://localhost:9292`.
 
 4.  Publish the Pact to the broker:
 
-        pact-broker publish ./pacts --consumer-app-version <version> --broker-base-url http://localhost:9292
+        pact-broker publish ./pacts --consumer-app-version 1.0.0 --broker-base-url http://localhost:9292
 
 ### 4. Set Up the Producer (Spring Boot)
 
