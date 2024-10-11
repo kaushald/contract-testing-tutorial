@@ -16,4 +16,11 @@ export class DataService {
     const response = await axios.get(`${this.producerUrl}/users/${id}`);
     return response.data;
   }
+
+  async getOrderDetailsByUserId(userId: number) {
+    const response = await axios.get(
+      `${this.producerUrl}/users/${userId}/orders`,
+    );
+    return response.data;
+  }
 }

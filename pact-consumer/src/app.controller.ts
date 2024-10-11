@@ -14,4 +14,9 @@ export class AppController {
   async getUserById(@Param('id') id: number) {
     return await this.dataService.getUserById(id);
   }
+
+  @Get('user/:id/orders')
+  async getOrderDetailsByUserId(@Param('id') userId: number) {
+    return await this.dataService.getOrderDetailsByUserId(userId);
+  }
 }
