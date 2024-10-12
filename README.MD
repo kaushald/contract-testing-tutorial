@@ -75,6 +75,10 @@ Ensure:
 - The Pact Broker is accessible at `http://localhost:9292`.
 - Each service (consumer and producer) is correctly configured.
 
+---
+
+---
+
 ## Explanation of Contract Testing with Pact
 
 This project demonstrates how Pact facilitates **contract testing** between a consumer (NestJS) and a provider (Spring Boot) in a microservices architecture. Contract testing helps ensure that services can communicate correctly by enforcing a shared understanding, or "contract," between them.
