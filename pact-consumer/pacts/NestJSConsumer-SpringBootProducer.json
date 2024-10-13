@@ -138,6 +138,57 @@
     },
     "pactSpecification": {
       "version": "2.0.0"
+    },
+    "performanceExpectations": {
+      "responseTimes": {
+        "p50": "200ms",
+        "p90": "300ms",
+        "p99": "500ms",
+        "max": "1000ms"
+      },
+      "allowedErrorRate": "0.5%",
+      "trafficPatterns": {
+        "regularLoad": {
+          "requestsPerSecond": "50",
+          "hoursOfOperation": "24/7"
+        },
+        "peakLoad": {
+          "requestsPerSecond": "200",
+          "expectedPeakHours": ["08:00-12:00", "18:00-21:00"]
+        },
+        "specialPeriods": {
+          "requestsPerSecond": "300",
+          "description": "Annual promotional event",
+          "duration": "3 days"
+        }
+      }
+    },
+    "scalabilityExpectations": {
+      "expectedScaleFactor": "3x",
+      "maxConcurrentRequests": "1000",
+      "dependencies": [
+        "Database connection pool size must be scalable to handle peak load",
+        "Cache size and eviction policy to be optimized for high concurrency"
+      ]
+    },
+    "resiliencyExpectations": {
+      "retryPolicy": {
+        "maxRetries": 3,
+        "backoffStrategy": "exponential",
+        "maxBackoffTime": "5s"
+      },
+      "circuitBreaker": {
+        "failureThreshold": "10%",
+        "resetTimeout": "60s"
+      },
+      "failover": {
+        "description": "Fallback mechanism in case of producer unavailability",
+        "target": "Cache or secondary provider service"
+      }
+    },
+    "notes": {
+      "description": "This Pact contract includes expectations for performance, scalability, and resiliency under varying load conditions.",
+      "lastUpdated": "2024-10-11"
     }
   },
   "provider": {

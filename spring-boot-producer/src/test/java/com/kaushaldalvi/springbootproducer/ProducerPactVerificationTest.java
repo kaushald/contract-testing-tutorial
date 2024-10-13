@@ -48,5 +48,3 @@ public class ProducerPactVerificationTest {
         // Set up any data needed for this interaction, if necessary.
     }
 }
-
-//

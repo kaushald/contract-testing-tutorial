@@ -38,6 +38,7 @@ This sets up a Pact Broker at `http://localhost:9292`.
 
         npm test test/pact/consumer.data.pact.spec.ts
         npm test test/pact/consumer.user.pact.spec.ts
+        npm test test/pact/consumer.order.pact.spec.ts
 
 4.  Publish the Pact to the broker:
 
